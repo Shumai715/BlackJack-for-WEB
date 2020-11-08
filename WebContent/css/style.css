@@ -1,0 +1,288 @@
+body{
+	width:600px;
+	margin:24px auto;
+}
+p{
+	font-size:1rem;
+}
+form{
+	font-size:1rem;
+}
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: rgba(0, 0, 255, 1);
+}
+
+a:hover{
+	 text-decoration: underline;
+}
+
+/* ----------------- index.jsp ----------------------------*/
+.topPage-div{
+	border:solid 1px #dbedf0;
+	padding-bottom:8px;
+	margin-bottom: 52px;
+}
+
+.topPage-div h2{
+	margin:0;
+	margin-bottom: 8px;
+	padding:4px;
+	background-color:rgba(0, 170, 255, .05);
+}
+.loginForm{
+  float: left;
+  margin: 0 12px 0 12px;
+}
+
+.topPage-div p{
+	margin-left:8px;
+}
+.loginButton{
+	margin-top:24px;
+	margin-left:4px;
+}
+
+.registerButton{
+	margin-left:12px;
+}
+
+.createForm{
+	margin-top:12px;
+}
+
+.createName{
+	margin-left: 24px;
+}
+.createName span{
+	margin-right:16px;
+}
+
+/* ---------------- registerUserForm.jsp ------------------*/
+.alreadyName{
+	color: red;
+
+}
+
+.registerUserForm-body form{
+	float: left;
+}
+.registerForTOP{
+	margin-top: 95px;
+	margin-left: -160px;
+}
+/* ----------------- myPage.jsp ----------------------------*/
+.myPage-body{
+	width:1100px;
+}
+
+.myPage-body h1{
+	width: 250px;
+	margin: 0 auto;
+}
+
+.container{
+	overflow: hidden;
+}
+
+.mypageBox{
+	float: left;
+}
+
+.mainBox{
+	width: 600px;
+}
+
+.rule{
+	background-color:rgba(200, 218, 173, .5) ;
+	padding: 12px 16px;
+	border-radius: 50px;
+
+}
+
+
+.myPage-button{
+	margin-top: 32px;
+	margin-left:40px;
+}
+.myPage-button form{
+	float:left;
+	margin-right: 80px;
+}
+
+.myPage-button input{
+	padding: 6px 12px;
+	font-size: 13pt;
+}
+
+
+.side-bar{
+	margin-left: 36px;
+}
+
+.border{
+	margin-bottom: 16px;
+	border-bottom: 4px dashed rgba(160, 200, 110, .8);
+}
+.history, .logOut{
+	margin-bottom: 5px;
+}
+
+/* ----------------- betIn.jsp ----------------------------*/
+.betIn-name{
+	margin-right:4px;
+}
+
+.betIn-chip{
+	font-weight:bold;
+	font-size:1.3rem;
+}
+.betIn-submit{
+	margin-left: 8px;
+}
+
+/* ----------------- mainGame.jsp ----------------------------*/
+.main-body{
+	width:auto;
+}
+
+.play-bord{
+	background-color:rgba(80, 140, 75, 1);
+	padding: 12px;
+}
+
+.play-bord p{
+	margin-left: 8px;
+	color: white;
+}
+.bord-dealer, .bord-player{
+	text-align:center;
+	margin: 0 auto;
+}
+
+.bord-dealer{
+	margin-bottom: 120px;
+}
+.main-container{
+	width: 620px;
+	margin: 0 auto;
+}
+.playerName{
+	 font-size:1.5rem;
+	 font-weight:bold;
+	 margin-right:4px;
+}
+
+.hand{
+	margin: 0 auto;
+}
+
+
+.playerHand{
+	margin-bottom:24px;
+}
+
+
+.handCard {
+	background-color: white;
+    padding: 32px 4px 24px 4px;
+    margin: 12px 4px;
+    font-weight: bold;
+    border: solid 2px #000000;
+}
+
+.cardContent{
+	font-size:1.8rem;
+}
+
+.DeckEndMessege{
+	color: white;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 24px;
+}
+.bord-bet{
+	border-radius:50%;
+	text-align:center;
+ 	margin: 0 auto;
+ 	margin-bottom: 36px;
+ 	padding: 6px;
+ 	background-color: rgba(23, 96, 160, 1);
+ 	color: white;
+}
+.bet-999{
+	height:60px;
+ 	width:60px;
+ 	line-height:60px;
+}
+
+.bet-99999{
+	height:80px;
+ 	width:80px;
+ 	line-height:80px;
+}
+.bet-mugen{
+	height:100px;
+ 	width:100px;
+ 	line-height:100px;
+}
+.bord-bet span{
+	font-weight: bold;
+	font-size: 13pt;
+}
+
+.point{
+	margin-right:8px;
+	font-size: 1.8rem;
+}
+
+.action{
+	font-size: 1.0rem
+}
+
+.main-rule{
+	width:1200px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+.main-rule p{
+	margin-bottom: 4px;
+}
+
+/*--------------- Ranking.jsp --------------- */
+
+.playHistory{
+	margin-bottom:36px;
+}
+.playHistory-cell{
+	padding: 4px 12px;
+}
+.userRecord{
+	background-color:rgba(200, 218, 173, .3) ;
+}
+
+.nowRecord{
+	background-color:rgba(200, 218, 173, .6) ;
+}
+.ranking-adiv{
+	margin-top: 20px;
+}
+.ranking-a{
+	margin-right: 32px
+}
+
+/*------------- playResult.jsp ---------------- */
+.playResult-body{
+	margin-top: 52px;
+}
+.playResult-container{
+	margin-top: 40px;
+}
+.playResult-span{
+	font-weight: bold;
+	font-size: 16pt;
+	margin-right: 4px;
+}
+.playResult-a{
+	margin-right: 32px;
+}
