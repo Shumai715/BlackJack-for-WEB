@@ -64,7 +64,8 @@ int rank = 0;
 <%} %>
 <div class="ranking-adiv">
 <a class="ranking-a" href="/MyPage">マイページへ</a>
-<a class="ranking-a" href="/ranking.jsp">ランキングTOP10へ</a>
+<a class="ranking-a" href="/ranking.jsp">スコアランキングTOP10へ</a><br>
+<a class="ranking-a" href="/userRanking.jsp">ユーザー別最高スコアランキングへ</a>
 </div>
 </body>
 </html>

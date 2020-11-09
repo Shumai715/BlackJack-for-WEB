@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.RecordDAO;
+import dao.UserDAO;
 import model.PlayRecord;
+import model.User;
 
 /**
  * Servlet implementation class Ranking
@@ -34,10 +36,14 @@ public class Ranking extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RecordDAO recordDAO = new RecordDAO();
+		UserDAO userDAO = new UserDAO();
 
 		List<PlayRecord> rankingList = recordDAO.getRankingRecord();
 		HttpSession session = request.getSession();
 		session.setAttribute("rankingList", rankingList);
+
+		List<User> userList = userDAO.getUserRanking();
+		session.setAttribute("userList", userList);
 
 		PlayRecord nowRecord = (PlayRecord)session.getAttribute("nowRecord");
 		for(PlayRecord record: rankingList) {
@@ -59,10 +65,14 @@ public class Ranking extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		RecordDAO recordDAO = new RecordDAO();
+		UserDAO userDAO = new UserDAO();
 
 		List<PlayRecord> rankingList = recordDAO.getRankingRecord();
 		HttpSession session = request.getSession();
 		session.setAttribute("rankingList", rankingList);
+
+		List<User> userList = userDAO.getUserRanking();
+		session.setAttribute("userList", userList);
 
 		PlayRecord nowRecord = (PlayRecord)session.getAttribute("nowRecord");
 		for(PlayRecord record: rankingList) {

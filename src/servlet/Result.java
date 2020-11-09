@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.RecordDAO;
+import dao.UserDAO;
 import model.PlayRecord;
 import model.Player;
 
@@ -35,6 +36,10 @@ public class Result extends HttpServlet {
 		RecordDAO recordDAO = new RecordDAO();
 
 		recordDAO.insert(record);
+
+		UserDAO userDAO = new UserDAO();
+		userDAO.setMaxScore(player.getName());
+
 		session.setAttribute("nowRecord", record);
 
 		RequestDispatcher dispatcher =
