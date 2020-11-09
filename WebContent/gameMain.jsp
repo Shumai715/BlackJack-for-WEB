@@ -85,18 +85,24 @@ Deck deck = (Deck)session.getAttribute("deck");
 
 <form action="/GameMain" method="post">
 <p class="action">アクション：<br>
-<input type="radio" name="action" value="hit" checked="checked">Hit … 一枚引く<br>
-<input type="radio" name="action" value="stand">Stand … この手札で勝負<br>
-<%if(player.getChip() > player.getBet() && player.getHand().size() == 2){ %>
-	<input type="radio" name="action" value="double">Double Down(初手のみ) … 賭け金を二倍し、一枚引いて勝負<br>
+<%if(player.getHand().size() == 2 && player.getHandSum() == 21){ %>
+	<label><input type="radio" name="action" value="hit">Hit … 一枚引く<br></label>
+	<label><input type="radio" name="action" value="stand"  checked="checked">Stand … この手札で勝負<br></label>
+<%}else{ %>
+	<label><input type="radio" name="action" value="hit" checked="checked">Hit … 一枚引く<br></label>
+	<label><input type="radio" name="action" value="stand">Stand … この手札で勝負<br></label>
+<%} %>
+
+<%if(player.getChip() >= player.getBet() && player.getHand().size() == 2){ %>
+	<label><input type="radio" name="action" value="double">Double Down(初手のみ) … 賭け金を二倍し、一枚引いて勝負<br></label>
 <%}else{%>
-	<input type="radio" name="action" value="double" disabled>Double Down(初手のみ) … 賭け金を二倍し、一枚引いて勝負<br>
+	<label><input type="radio" name="action" value="double" disabled>Double Down(初手のみ) … 賭け金を二倍し、一枚引いて勝負<br></label>
 <%} %>
 
 <%if(player.getHand().size() == 2){ %>
-	<input type="radio" name="action" value="fold">Fold (初手のみ) … 勝負を降りる（ベッドの半分が戻ってきます）</p>
+	<label><input type="radio" name="action" value="fold">Fold (初手のみ) … 勝負を降りる（ベッドの半分が戻ってきます）</p></label>
 <%}else{%>
-	<input type="radio" name="action" value="fold" disabled>Fold (初手のみ) … 勝負を降りる（ベッドの半分が戻ってきます）</p>
+	<label><input type="radio" name="action" value="fold" disabled>Fold (初手のみ) … 勝負を降りる（ベッドの半分が戻ってきます）</p></label>
 <%} %>
 <p><input type="submit" value="決定"><br>
 ※一回だけクリックしてください。</p>

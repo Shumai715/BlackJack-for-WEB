@@ -30,5 +30,7 @@
 	</p>
 	</form>
 </div>
+<p>ソースコードはこちら↓<br>
+<a href="https://github.com/Shumai715/BlackJack-for-WEB">https://github.com/Shumai715/BlackJack-for-WEB</a></p>
 </body>
 </html>

@@ -13,6 +13,7 @@ List<PlayRecord> recordList = (List<PlayRecord>)request.getAttribute("recordList
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
+<h1>プレイ履歴</h1>
 <%if(recordList.size() == 0 || recordList == null){ %>
 	<p>プレイ履歴がありません。</p>
 <%}else{%>

@@ -17,9 +17,19 @@ Player player = (Player) session.getAttribute("player");
 <p>賭け金を入力してください<br>
 <span class="betIn-name">${player.name}</span>さんの所持チップ数: <span class="betIn-chip">${player.chip}</span></p>
 <form action="/RegisterBet" method="post">
-賭け金:<input type="number" name="bet" required>
-<input class="betIn-submit" type="submit" value="決定"></form>
-<p style="color:red;">※1～${player.chip}の範囲で入力してください。<br>
+賭け金:<input type="number" name="bet" id="betIn" required>
+<input class="betIn-submit" type="submit" value="決定">
+</form>
+
+<script type="text/javascript">
+document.getElementById('betIn').focus();
+</script>
+
+<p style="color:red;">※1～${player.chip}の範囲で入力してください。</p>
+
+<form action="/Result" method="get">
+<input class="betIn-submit" type="submit" value="ゲームを終了する">
+</form>
 
 </body>
 </html>
