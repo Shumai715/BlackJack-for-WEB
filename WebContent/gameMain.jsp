@@ -74,10 +74,17 @@ Deck deck = (Deck)session.getAttribute("deck");
 	<%} %>
 </div>
 <p>${player.name}さん：
+<%if(player.getHandSum() == 21 && player.getHand().size() == 2){ %>
+	<span class="point"><%= player.getHandSum() - 10 %></span>or
+	<span class="point">${player.handSum}</span><br>
+	<span class="point">BLACK JACK!!</span>
+
+<%}else{ %>
 <%if(player.getExist1()){ %>
 	<span class="point"><%= player.getHandSum() - 10 %></span>or
 <%} %>
 <span class="point">${player.handSum}</span></p>
+<%} %>
 </div>
 </div>
 
