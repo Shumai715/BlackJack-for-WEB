@@ -63,9 +63,9 @@ int rank = 0;
 		<p>プレイした人がいないため、ランキングがありません。</p>
 <%} %>
 <div class="ranking-adiv">
-<a class="ranking-a" href="/MyPage">マイページへ</a>
-<a class="ranking-a" href="/ranking.jsp">スコアランキングTOP10へ</a><br>
-<a class="ranking-a" href="/userRanking.jsp">ユーザー別最高スコアランキングへ</a>
+<div class="ranking-eachDiv"><a class="ranking-a" href="/MyPage">マイページへ</a></div>
+<div class="ranking-eachDiv"><a class="ranking-a" href="/ranking.jsp">スコアTOP10ランキングへ</a><br></div>
+<div class="ranking-eachDiv"><a class="ranking-a" href="/userRanking.jsp">ユーザー別最高スコアランキングへ</a></div>
 </div>
 </body>
 </html>

@@ -17,7 +17,7 @@ int rank = 0;
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-<h1>全体ランキング</h1>
+<h1>ユーザー別最高スコアランキング</h1>
 <%if(userList != null){ %>
 	<table class="ranking" border="1">
 		<tr>
@@ -46,9 +46,9 @@ int rank = 0;
 		<p>プレイした人がいないため、ランキングがありません。</p>
 <%} %>
 <div class="ranking-adiv">
-<a class="ranking-a" href="/MyPage">マイページへ</a>
-<a class="ranking-a" href="/ranking.jsp">スコアランキングTOP10へ</a>
-<a class="ranking-a" href="/allRanking.jsp">スコア全体ランキングへ</a>
+<div class="ranking-eachDiv"><a class="ranking-a" href="/MyPage">マイページへ</a></div>
+<div class="ranking-eachDiv"><a class="ranking-a" href="/ranking.jsp">スコアTOP10ランキングへ</a></div>
+<div class="ranking-eachDiv"><a class="ranking-a" href="/allRanking.jsp">スコア全体ランキングへ</a><br></div>
 
 </div>
 </body>
