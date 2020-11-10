@@ -74,14 +74,6 @@ public class Ranking extends HttpServlet {
 		List<User> userList = userDAO.getUserRanking();
 		session.setAttribute("userList", userList);
 
-		PlayRecord nowRecord = (PlayRecord)session.getAttribute("nowRecord");
-		for(PlayRecord record: rankingList) {
-			if(record.equals(nowRecord)) {
-				System.out.println("true");
-			}else {
-				System.out.println("false");
-			}
-		}
 
 		RequestDispatcher dispatcher =
 				request.getRequestDispatcher("/ranking.jsp");

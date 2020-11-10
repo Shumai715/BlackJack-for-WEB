@@ -73,7 +73,6 @@ public class GameMain extends HttpServlet {
 			if(player.getHandSum() < 22 && !action.equals("fold")) {
 				while(dealer.getHandSum() < 17) {
 					dealer.draw(deck, graveDeck);
-					System.out.println("dealer:" + deck.getSize());
 				}
 			}
 			String result = main.result(player, dealer);

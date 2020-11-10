@@ -60,7 +60,6 @@ public class UserDAO {
 				String Username = rs.getString("name");
 				String Userpass = rs.getString("pass");
 				user = new User(name, Userpass);
-				System.out.println("select→ " + user.getName());
 			}
 		}catch(SQLException e) {
 			e.printStackTrace();
