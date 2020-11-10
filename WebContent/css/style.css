@@ -28,7 +28,7 @@ a:hover{
 	margin:0;
 	margin-bottom: 8px;
 	padding:4px;
-	background-color:rgba(0, 170, 255, .05);
+	background-color:rgba(0, 170, 255, .1);
 }
 .loginForm{
   float: left;
@@ -47,18 +47,11 @@ a:hover{
 	margin-left:12px;
 }
 
+/* ---------------- registerUserForm.jsp ------------------*/
 .createForm{
 	margin-top:12px;
 }
 
-.createName{
-	margin-left: 24px;
-}
-.createName span{
-	margin-right:16px;
-}
-
-/* ---------------- registerUserForm.jsp ------------------*/
 .alreadyName{
 	color: red;
 
@@ -71,6 +64,7 @@ a:hover{
 	margin-top: 95px;
 	margin-left: -160px;
 }
+
 /* ----------------- myPage.jsp ----------------------------*/
 .myPage-body{
 	width:1100px;
@@ -94,7 +88,7 @@ a:hover{
 }
 
 .rule{
-	background-color:rgba(200, 218, 173, .5) ;
+	background-color:rgba(122, 203, 225, .25);
 	padding: 12px 16px;
 	border-radius: 50px;
 
@@ -122,7 +116,7 @@ a:hover{
 
 .border{
 	margin-bottom: 16px;
-	border-bottom: 4px dashed rgba(160, 200, 110, .8);
+	border-bottom: 4px dashed rgba(122, 203, 225, .3);
 }
 .history, .logOut{
 	margin-bottom: 5px;
@@ -139,6 +133,11 @@ a:hover{
 }
 .betIn-submit{
 	margin-left: 8px;
+	margin-top: 16px;
+}
+
+.betInResult{
+	margin-top:36px;
 }
 
 /* ----------------- mainGame.jsp ----------------------------*/
@@ -258,14 +257,19 @@ a:hover{
 	padding: 4px 12px;
 }
 .userRecord{
-	background-color:rgba(200, 218, 173, .3) ;
+	background-color:rgba(122, 203, 225, .2);
 }
 
 .nowRecord{
-	background-color:rgba(200, 218, 173, .6) ;
+	background-color:rgba(122, 203, 225, .8);
 }
+
 .ranking-adiv{
 	margin-top: 20px;
+}
+
+.ranking-eachDiv{
+	margin-top: 14px;
 }
 .ranking-a{
 	margin-right: 32px

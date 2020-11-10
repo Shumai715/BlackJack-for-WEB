@@ -13,11 +13,11 @@
 	<h2>ログイン</h2>
 	<form action="/Login" method="post">
 		<div class="loginForm" >ニックネーム<br>
-		<input type="text" name="name" pattern=".*\S+.*" title="スペースが入っています。除去してください。" required></div>
+		<input type="text" name="name" pattern=".*\S+.*" title="スペースのみは無効です" required></div>
 
 		<div class="loginForm">
 		パスワード<br>
-		<input type="password" name="pass" pattern=".*\S+.*" title="スペースが入っています。除去してください。" required>
+		<input type="password" name="pass" pattern=".*\S+.*" title="スペースのみは無効です" required>
 		</div>
 		<input class="loginButton" type="submit" value="ログイン"><br>
 	</form>
@@ -25,7 +25,7 @@
 <div class="topPage-div">
 	<h2>初めての方はこちら</h2>
 	<form action="/registerUserForm.jsp">
-	<p>まだ登録をしていない方は右の「新規登録」をクリック！
+	<p>まだ登録をしていない方は「新規登録」をクリック！
 	<input class="registerButton" type="submit" value="新規登録">
 	</p>
 	</form>
