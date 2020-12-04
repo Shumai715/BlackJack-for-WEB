@@ -13,11 +13,11 @@
 	<h2>ログイン</h2>
 	<form action="/Login" method="post">
 		<div class="loginForm" >ニックネーム<br>
-		<input type="text" name="name" pattern=".*\S+.*" title="スペースのみは無効です" required></div>
+		<input type="text" name="name" pattern="\S+" title="スペースが入っている名前は無効です" required></div>
 
 		<div class="loginForm">
 		パスワード<br>
-		<input type="password" name="pass" pattern=".*\S+.*" title="スペースのみは無効です" required>
+		<input type="password" name="pass" pattern="\S+" title="スペースが入っている名前は無効です" required>
 		</div>
 		<input class="loginButton" type="submit" value="ログイン"><br>
 	</form>

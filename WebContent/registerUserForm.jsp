@@ -23,12 +23,12 @@ if(alreadyName == null){
 <form action="/RegisterUser" method="post">
 	<div class="createForm createName">
 		<span>ニックネーム</span>  ：
-		<input type="text" name="name" pattern=".*\S+.*" title="スペースのみは無効です"  required>
+		<input type="text" name="name" pattern="\S+" title="スペースが入っている名前は無効です"  required>
 	</div>
 
 	<div class="createForm">
 		パスワード：
-		<input type="password" name="pass" pattern=".*\S+.*" title="スペースのみは無効です"  required>
+		<input type="password" name="pass" pattern="\S+" title="スペースが入っている名前は無効です"  required>
 	</div>
 	<input class="loginButton" type="submit" value="登録">
 </form>
