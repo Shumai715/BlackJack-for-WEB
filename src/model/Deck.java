@@ -25,12 +25,6 @@ public class Deck implements Serializable{
 		}
 	}
 
-	public void createTest() {
-		for(int i = 0; i < 26; i++) {
-			Card card = new Card(i + 1);
-			deck.add(card);
-		}
-	}
 
 	public void add(Card card) {
 		deck.add(card);
