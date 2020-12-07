@@ -35,18 +35,18 @@ int rank = 0;
 					<%String listName = rankingList.get(i).getPlayerName();%>
 
 		   			<%if(listName.equals(userName)){%>
-		       			<%if(nowRecord != null &&
-		       			   rank == 0 &&
-		       			   rankingList.get(i).getScore() == nowRecord.getScore() &&
-		       	 		   rankingList.get(i).getDate().equals(nowRecord.getDate()) ){ %>
+						<%if(nowRecord != null
+						&& rank == 0
+		      	 		&& rankingList.get(i).getScore() == nowRecord.getScore()
+		       			&& rankingList.get(i).getDate().equals(nowRecord.getDate()) ){ %>
 							<%rank = i + 1; %>
-		           			<tr class="nowRecord">
+		         	    	<tr class="nowRecord">
 		     			<%}else{ %>
-		     	  			<tr class="userRecord">
+		     	  	   		<tr class="userRecord">
 		     			<%} %>
-		  			<%}else{ %>
+		   			<%}else{ %>
 		   				<tr>
-		   			<%} %>
+			    	<%} %>
 
 		  	  		<td class="playHistory-cell"><%= i+1 %></td>
   			 		<td class="playHistory-cell"><%= rankingList.get(i).getPlayerName() %></td>
