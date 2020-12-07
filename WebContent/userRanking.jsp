@@ -23,21 +23,21 @@ int rank = 0;
 		<table class="ranking" border="1">
 			<tr>
 			  <th class="playHistory-cell">順位</th>
-		 	  <th class="playHistory-cell">名前</th>
-		      <th class="playHistory-cell">スコア</th>
+				<th class="playHistory-cell">名前</th>
+				<th class="playHistory-cell">スコア</th>
 			</tr>
 
 			<%for(int i = 0; i < userList.size(); i++){%>
-		  		 <%if(userList.get(i).getName().equals(userName)){%>
-		       		<tr class="userRecord">
-		       		<% rank = i + 1; %>
-		   		 <%}else{ %>
-		   	 		<tr>
-		   		 <%} %>
-		  		 <td class="playHistory-cell"><%= i+1 %></td>
-  			  	 <td class="playHistory-cell"><%= userList.get(i).getName() %></td>
-			  	 <td class="playHistory-cell"><%= userList.get(i).getMaxScore()%></td>
-				 </tr>
+				<%if(userList.get(i).getName().equals(userName)){%>
+					<tr class="userRecord">
+					<% rank = i + 1; %>
+				<%}else{ %>
+					<tr>
+				<%} %>
+				<td class="playHistory-cell"><%= i+1 %></td>
+				<td class="playHistory-cell"><%= userList.get(i).getName() %></td>
+				<td class="playHistory-cell"><%= userList.get(i).getMaxScore()%></td>
+				</tr>
 			<%} %>
 		</table>
 		<%if(rank != 0){ %>

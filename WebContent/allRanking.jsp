@@ -23,33 +23,33 @@ int rank = 0;
 		<%if(rankingList != null){ %>
 			<table class="ranking" border="1">
 				<tr>
-		 		 	<th class="playHistory-cell">順位</th>
-				 	<th class="playHistory-cell">名前</th>
-		 			<th class="playHistory-cell">スコア</th>
-				 	<th class="playHistory-cell">日付</th>
+					<th class="playHistory-cell">順位</th>
+					<th class="playHistory-cell">名前</th>
+					<th class="playHistory-cell">スコア</th>
+					<th class="playHistory-cell">日付</th>
 				</tr>
 
 				<%for(int i = 0; i < rankingList.size(); i++){%>
 					<%String listName = rankingList.get(i).getPlayerName();%>
 
-		   			<%if(listName.equals(userName)){%>
+					<%if(listName.equals(userName)){%>
 						<%if(nowRecord != null
 						&& rank == 0
-		      	 		&& rankingList.get(i).getScore() == nowRecord.getScore()
-		       			&& rankingList.get(i).getDate().equals(nowRecord.getDate()) ){ %>
+						&& rankingList.get(i).getScore() == nowRecord.getScore()
+						&& rankingList.get(i).getDate().equals(nowRecord.getDate()) ){ %>
 							<%rank = i + 1; %>
-		         	    	<tr class="nowRecord">
-		     			<%}else{ %>
-		     	  	   		<tr class="userRecord">
-		     			<%} %>
-		   			<%}else{ %>
-		   				<tr>
-			    	<%} %>
+							<tr class="nowRecord">
+						<%}else{ %>
+							<tr class="userRecord">
+						<%} %>
+					<%}else{ %>
+						<tr>
+					<%} %>
 
-		  	  		<td class="playHistory-cell"><%= i+1 %></td>
-  			 		<td class="playHistory-cell"><%= rankingList.get(i).getPlayerName() %></td>
-			 		<td class="playHistory-cell"><%= rankingList.get(i).getScore() %></td>
-			  		<td class="playHistory-cell"><%= rankingList.get(i).getDate() %></td>
+					<td class="playHistory-cell"><%= i+1 %></td>
+					<td class="playHistory-cell"><%= rankingList.get(i).getPlayerName() %></td>
+					<td class="playHistory-cell"><%= rankingList.get(i).getScore() %></td>
+					<td class="playHistory-cell"><%= rankingList.get(i).getDate() %></td>
 					</tr>
 				<%} %>
 			</table>
