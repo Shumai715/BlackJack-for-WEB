@@ -7,9 +7,10 @@
 <title>Black Jack</title>
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
+
 <body>
-<p>登録が完了しました<br>
-トップページより、ログインしてください</p>
-<a href="/">トップへ戻る</a>
+	<p>登録が完了しました<br>
+	トップページより、ログインしてください</p>
+	<a href="/">トップへ戻る</a>
 </body>
 </html>
