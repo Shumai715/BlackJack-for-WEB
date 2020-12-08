@@ -43,7 +43,7 @@ public class Result extends HttpServlet {
 		session.setAttribute("nowRecord", record);
 
 		RequestDispatcher dispatcher =
-				request.getRequestDispatcher("/WEB-INF/jsp/playResult.jsp");
+				request.getRequestDispatcher("/playResult.jsp");
 		dispatcher.forward(request, response);
 
 	}

@@ -30,7 +30,7 @@ public class RegisterUser extends HttpServlet {
 		if(user == null) {
 			user = new User(name, pass);
 			userDAO.userAdd(user);
-			forwardPath = "/WEB-INF/jsp/registerOK.jsp";
+			forwardPath = "/registerOK.jsp";
 		}else {
 			request.setAttribute("alreadyName", "true");
 			forwardPath = "/registerUserForm.jsp";

@@ -41,7 +41,7 @@ public class PlayHistory extends HttpServlet {
 		request.setAttribute("recordList", recordList);
 
 		RequestDispatcher dispatcher =
-				request.getRequestDispatcher("/WEB-INF/jsp/playHistory.jsp");
+				request.getRequestDispatcher("/playHistory.jsp");
 		dispatcher.forward(request, response);
 	}
 

@@ -32,11 +32,11 @@ public class Login extends HttpServlet {
 		if(user == null) {
 			reason = "name";
 			request.setAttribute("reason", reason);
-			forwardPath = "/WEB-INF/jsp/loginFailure.jsp";
+			forwardPath = "/loginFailure.jsp";
 		}else if(!user.getPass().equals(loginPass)) {
 			reason = "pass";
 			request.setAttribute("reason", reason);
-			forwardPath = "/WEB-INF/jsp/loginFailure.jsp";
+			forwardPath = "/loginFailure.jsp";
 		}else {
 			HttpSession session = request.getSession();
 			if(session.isNew() == false) {

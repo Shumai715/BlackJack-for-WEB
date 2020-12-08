@@ -37,7 +37,7 @@ public class MyPage extends HttpServlet {
 		request.setAttribute("maxScore", maxScore);
 
 		RequestDispatcher dispatcher =
-				request.getRequestDispatcher("/WEB-INF/jsp/myPage.jsp");
+				request.getRequestDispatcher("/myPage.jsp");
 		dispatcher.forward(request, response);
 
 	}
@@ -63,7 +63,7 @@ public class MyPage extends HttpServlet {
 		request.setAttribute("maxScore", maxScore);
 
 		RequestDispatcher dispatcher =
-				request.getRequestDispatcher("/WEB-INF/jsp/myPage.jsp");
+				request.getRequestDispatcher("/myPage.jsp");
 		dispatcher.forward(request, response);
 
 	}
