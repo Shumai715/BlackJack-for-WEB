@@ -14,11 +14,9 @@ public class Main{
 	public boolean action(String action, Player player, Deck deck, Deck graveDeck) {
 		if(action.equals("hit")) { //Hitのとき
 			player.draw(deck, graveDeck);
-		}
-		else if(action.equals("stand")){ //Standのとき
+		}else if(action.equals("stand")){ //Standのとき
 			player.setTurnEndFlag(true);
-		}
-		else if(action.equals("double")) { //Double Downのとき
+		}else if(action.equals("double")) { //Double Downのとき
 			int bet = player.getBet();
 			player.setBet(bet*2);
 
@@ -27,12 +25,10 @@ public class Main{
 
 			player.draw(deck, graveDeck);
 			player.setTurnEndFlag(true);
-		}
-		else if(action.equals("fold")) {
+		}else if(action.equals("fold")) { //Foldのとき
 			player.setTurnEndFlag(true);
 			player.setFoldFlag(true);
 		}
-
 		return player.getTurnEndFlag();
 	}
 
@@ -47,8 +43,7 @@ public class Main{
 		if(player.getFoldFlag()) {
 			result ="You are FOLD";
 			player.setChip(chip + bet / 2);
-		}
-		else if(playerSum == dealerSum) {
+		}else if(playerSum == dealerSum) {
 			if(playerSum == 21) {
 				if(player.getHand().size() == 2 && dealer.getHand().size() == 2) {
 					result ="Draw";
@@ -66,8 +61,7 @@ public class Main{
 				result ="Draw";
 				player.setChip(chip + bet);
 			}
-		}
-		else if(playerSum == 21) {
+		}else if(playerSum == 21) {
 			if(player.getHand().size() == 2) {
 				result = "✨BLACK JACK✨ \r\n You Win!!!";
 				player.setChip(chip + bet * 5 / 2);
@@ -75,23 +69,17 @@ public class Main{
 				result ="You Win!!!";
 				player.setChip(chip + bet * 2);
 			}
-		}
-		else if(dealerSum == 21) {
+		}else if(dealerSum == 21) {
 			result = "You Lose...";
-		}
-		else if(playerSum > 21) {
+		}else if(playerSum > 21) {
 			result = "You Lose...";
-		}
-		else if(dealerSum > 21) {
+		}else if(dealerSum > 21) {
 			result ="You Win!!!";
 			player.setChip(chip + bet * 2);
-		}
-
-		else if(playerSum > dealerSum) {
+		}else if(playerSum > dealerSum) {
 			result = "You Win!!!";
 			player.setChip(chip + bet * 2);
-		}
-		else if(playerSum < dealerSum) {
+		}else if(playerSum < dealerSum) {
 			result = "You Lose...";
 		}
 
