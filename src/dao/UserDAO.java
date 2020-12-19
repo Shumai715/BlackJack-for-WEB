@@ -17,36 +17,6 @@ public class UserDAO {
 	private final String DB_USER ="fcvjvhrnggfmhc";
 	private final String DB_PASS ="b65f8c3a102752e124985da827543198c7266fe75aab67694293039a8cdcf24a";
 
-	public List<User> findAll(){
-		Connection conn = null;
-		List<User> userList = new ArrayList<>();
-		try{
-			conn = DriverManager.getConnection(JDBC_URL,DB_USER, DB_PASS);
-			String sql ="select * from userData";
-			PreparedStatement pStmt = conn.prepareStatement(sql);
-			ResultSet rs = pStmt.executeQuery();
-			while(rs.next()) {
-				String name = rs.getString("name");
-				String pass = rs.getString("pass");
-
-				User user = new User(name, pass);
-				userList.add(user);
-			}
-		}catch(SQLException e) {
-			e.printStackTrace();
-			return null;
-		}finally{
-			  try{
-				    if (conn != null){
-				      conn.close();
-				    }
-				  }catch (SQLException e){
-					  e.printStackTrace();
-				  }
-		}
-
-		return userList;
-	}
 
 	public User select(String name) {
 		User user = null;
