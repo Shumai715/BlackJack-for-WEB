@@ -15,8 +15,6 @@ import model.Main;
 import model.Player;
 
 
-//デッキを少数にしたデッキのクリエイトメソッド、デッキの新しいコンストラクタ、
-//必ず1を引くdealerのdraw, それを使ったMain
 
 /**
  * Servlet implementation class GameMain
