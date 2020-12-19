@@ -91,7 +91,7 @@ public class Dealer implements Serializable{
 	public int sumup() {
 		int sum = 0;
 
-		for(Iterator it = hand.iterator(); it.hasNext();) {
+		for(Iterator it = hand.iterator(); it.hasNext(); ) {
 			Card card = (Card)it.next();
 			sum += card.numberInt;
 		}
