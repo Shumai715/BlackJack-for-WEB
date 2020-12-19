@@ -98,7 +98,7 @@ public class Dealer implements Serializable{
 
 		if(this.exist1) {
 			if(sum + 10 < 22) {
-					sum += 10;
+				sum += 10;
 			}else {
 				this.exist1 = false;
 			}
