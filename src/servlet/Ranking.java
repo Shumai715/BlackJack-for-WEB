@@ -59,25 +59,5 @@ public class Ranking extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		RecordDAO recordDAO = new RecordDAO();
-		UserDAO userDAO = new UserDAO();
-
-		List<PlayRecord> rankingList = recordDAO.getRankingRecord();
-		HttpSession session = request.getSession();
-		session.setAttribute("rankingList", rankingList);
-
-		List<User> userList = userDAO.getUserRanking();
-		session.setAttribute("userList", userList);
-
-
-		RequestDispatcher dispatcher =
-				request.getRequestDispatcher("/ranking.jsp");
-		dispatcher.forward(request, response);
-	}
 
 }

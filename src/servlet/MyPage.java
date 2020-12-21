@@ -26,7 +26,7 @@ public class MyPage extends HttpServlet {
 		RecordDAO recordDAO = new RecordDAO();
 
 		PlayRecord nowRecord = (PlayRecord)session.getAttribute("nowRecord");
-		if(nowRecord != null) {
+		if(nowRecord != null) { //sessionスコープのnowRecordを削除
 			session.removeAttribute("nowRecord");
 		}
 
@@ -52,7 +52,7 @@ public class MyPage extends HttpServlet {
 		RecordDAO recordDAO = new RecordDAO();
 
 		PlayRecord nowRecord = (PlayRecord)session.getAttribute("nowRecord");
-		if(nowRecord != null) {
+		if(nowRecord != null) { //sessionスコープのnowRecordを削除
 			session.removeAttribute("nowRecord");
 		}
 
