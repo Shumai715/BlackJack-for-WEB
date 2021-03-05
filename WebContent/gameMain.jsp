@@ -91,7 +91,7 @@ Deck deck = (Deck)session.getAttribute("deck");
 
 	<p class="chip">所持チップ：${player.chip}枚</p>
 
-	<form action="/GameMain" method="post">
+	<form id="actionForm" action="/GameMain" method="post">
 		<p class="action">アクション：<br>
 		<%if(player.getHand().size() == 2 && player.getHandSum() == 21){ %>
 			<label><input type="radio" name="action" value="hit" disabled>Hit … 一枚引く<br></label>
@@ -113,7 +113,7 @@ Deck deck = (Deck)session.getAttribute("deck");
 			<label><input type="radio" name="action" value="fold" disabled>Fold (初手のみ) … 勝負を降りる（ベッドの半分が戻ってきます）</p></label>
 		<%} %>
 
-		<p><input type="submit" value="決定"><br>
+		<p><input type="submit" id ="submit" value="決定"><br>
 		※一回だけクリックしてください。</p>
 
 		<p style="color:red;font-size:12pt;">※「Double Down」と「Fold」は初手のみ選択可<br>
@@ -133,5 +133,10 @@ Deck deck = (Deck)session.getAttribute("deck");
 			<p>注意：このゲームは1デックで行います。山札のカードを全て引き終わった回が最後の勝負です。なお、山札のカードが無くなった後は、捨て札からランダムで引かれます。</p>
 	</div>
 
+<script>
+	document.getElementById('actionForm').onsubmit = function(){
+		document.getElementById('submit').disabled = true;
+	};
+</script>
 </body>
 </html>
